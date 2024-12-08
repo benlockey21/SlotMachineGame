@@ -126,7 +126,7 @@ public class Game
             if (isWinningSpin)
             {
                 decimal multiplier = symbolsPicked.Sum(s => s.Coefficient);
-                amountWon += multiplier * stakeAmount;
+                amountWon += (multiplier * stakeAmount);
             }
 
             Console.WriteLine();
