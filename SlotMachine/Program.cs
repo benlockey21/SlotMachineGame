@@ -22,6 +22,12 @@ public class Program
             Environment.Exit(0);
         }
 
+        if (symbols.Count < 3)
+        {
+            Console.WriteLine($"Configuration error. Game requires at least 3 symbols to play.");
+            Environment.Exit(0);
+        }
+
         Game game = new Game(symbols);
 
         bool playAgain = true;
