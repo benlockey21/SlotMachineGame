@@ -28,20 +28,15 @@ public class Program
             Environment.Exit(0);
         }
 
-        Game game = new Game(symbols);
-
-        bool playAgain = true;
-        while (playAgain)
+        bool play = true;
+        while (play)
         {
+            Game game = new Game(symbols);
             Console.WriteLine("Would you like to play again? (Y/N)");
             string? input = Console.ReadLine();
-            if (input != null && input.ToUpper() == "Y")
+            if (input == null || input.ToUpper() != "Y")
             {
-                Game newGame = new Game(symbols);
-            }
-            else
-            {
-                playAgain = false;
+                play = false;
             }
         }
     }
